@@ -20,7 +20,7 @@ function App() {
       const data=await fetch('https://dummyjson.com/recipes/search?q='+input);
       const json=await data.json();
       setResults(json?.recipes);
-      setCache((prev)=>({...prev,  [input]:json?.recipes}))
+      setCache((prev)=>({...prev,  [input]:json?.recipes}));
 
   };
 
