@@ -7,7 +7,7 @@ const OTP_DIGIT_COUNT=5;
 function App() {
 
   const [arrInput, setArrInput] = useState(
-    new Array(OTP_DIGIT_COUNT).fill()
+    new Array(OTP_DIGIT_COUNT).fill('')
   );
    
   const refArr=useRef([]);
