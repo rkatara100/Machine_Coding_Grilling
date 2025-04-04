@@ -24,6 +24,7 @@ function App() {
      const newArr=[...arrInput];
      newArr[idx]=value.slice(-1);
      setArrInput(newArr);
+     refArr.current[idx+1]?.focus();
 
   }
   
