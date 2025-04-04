@@ -20,12 +20,19 @@ function App() {
        
      if(isNaN(value ))return;
      console.log(value);
+     const newvalue=value.trim();
 
      const newArr=[...arrInput];
-     newArr[idx]=value.slice(-1);
+     newArr[idx]=newvalue.slice(-1);
      setArrInput(newArr);
-     refArr.current[idx+1]?.focus();
+     newvalue && refArr.current[idx+1]?.focus();
+  }
 
+  const handleKeyDown=(e,idx)=>{
+     console.log(e.key);
+       if (e.key==="Backspace") {
+        refArr.current[idx-1]?.focus();
+       }
   }
   
 
@@ -39,6 +46,7 @@ function App() {
                  value={arrInput[id]} key={id} 
                  onChange={(e)=>changeHandler(e.target.value,id)}
                  ref={(input)=>(refArr.current[id]=input)}
+                 onKeyDown={(e)=>handleKeyDown(e,id)}
                  />
                )
           })
