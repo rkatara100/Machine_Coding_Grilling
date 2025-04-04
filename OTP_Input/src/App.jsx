@@ -29,8 +29,10 @@ function App() {
   }
 
   const handleKeyDown=(e,idx)=>{
-     console.log(e.key);
-       if (e.key==="Backspace") {
+    //  console.log(e);
+    //  console.log(e.key);
+
+       if (!e.target.value && e.key==="Backspace") {
         refArr.current[idx-1]?.focus();
        }
   }
