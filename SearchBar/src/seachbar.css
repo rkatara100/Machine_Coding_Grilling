@@ -1,0 +1,14 @@
+.search_bar_container {
+  border: 2px solid blue;
+}
+
+.search_bar {
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  margin: 5px;
+}
+
+.search_bar.active {
+  border: 5px solid yellow;
+}
